@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html
+	lang="pt-br"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Broadfactor - Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body style="margin-top: 20px;">
+<form method="post" th:object="${usuario}" th:action="@{save}">
+<table style="margin-left: auto; margin-right: auto;">
+	<tr>
+		<td><label for="nome" class="form-label">Nome:</label>
+		<input id="nome" type="text" th:field="*{nome}" class="form-control" /></td>
+	</tr>
+	<tr>
+		<td><label for="email" class="form-label">E-mail:</label>
+		<input id="email" type="text" th:field="*{email}"class="form-control" /></td>
+	</tr>
+	<tr>
+		<td><label for="cnpj" class="form-label">CNPJ:</label>
+		<input id="cnpj" name="cnpj" type="text" th:field="*{cnpj}"class="form-control" /></td>
+	</tr>
+	<tr>
+		<td><label for="senha" class="form-label">Senha:</label>
+		<input id="senha" type="password" th:field="*{senha}"class="form-control" /></td>
+	</tr>
+	<tr>
+		<td align="center" style="padding-top: 10px;"><input type="submit" class="btn btn-dark" value="Salvar">&nbsp;&nbsp;&nbsp;<input type="button" class="btn btn-dark" value="Voltar" onclick="javascript: window.history.back();"></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
